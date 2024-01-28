@@ -1,8 +1,7 @@
+
 terraform {
-  backend "s3" {
-    bucket = "my-hosted-terraform-state-bucket"
-    key    = "terraform/backend/terraform.tfstate"
-    region = "us-east-1"
+  backend "git" {
+    repository = "https://github.com/srinivasmunugoti/terraform_python_githubactions.git"
+    file = "terraform/backend/tfstate.json
   }
 }
-
