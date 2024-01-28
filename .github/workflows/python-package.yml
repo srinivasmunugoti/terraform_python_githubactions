@@ -19,8 +19,8 @@ jobs:
       uses: actions/checkout@v4.1.1
       with:
         repository: srinivasmunugoti/terraform_python_githubactions
-        ref: main
-        token: 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
+        ref: 'main'
+    #    token: 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
 
     - uses: actions/setup-python@v5
       with:
