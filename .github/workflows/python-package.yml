@@ -46,7 +46,7 @@ jobs:
       run: ls -lrt
 
     - name: terraform initialization
-      run: terraform init 
+      run: terraform init -backend-config="backend.tf"
 
       
 #    - name: terraform planning
