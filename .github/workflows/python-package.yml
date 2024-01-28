@@ -21,9 +21,11 @@ jobs:
         repository: srinivasmunugoti/terraform_python_githubactions
         ref: main
     #    token: # optional, default is ${{ github.token }}
-    - uses: actions/checkout@v4
+
     - uses: actions/setup-python@v5
       with:
-        python-version: '3.10' 
-    - run: python my_script.py
+        python-version: '3.9' 
+        cache: 'pip' # caching pip dependencies        
+    - run: pip install -r requirements.txt
+    
     
