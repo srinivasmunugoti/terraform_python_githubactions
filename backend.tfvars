@@ -2,8 +2,8 @@
 
 terraform {
   backend "s3" {
-    bucket = "mybucket"
-    key    = "path/to/my/key"
+    bucket = "my-terraform-python-test"
+    key    = "terraform/pythongithub/terraform.tfstate"
     region = "us-east-1"
   }
 }
