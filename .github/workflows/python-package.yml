@@ -43,7 +43,7 @@ jobs:
       run: aws configure list
       
     - name: present location
-      run: pwd
+      run: ls -lrt
 #    - name: terraform initialization
  #     run: terraform init -backend-config=backend.tfvars
 
