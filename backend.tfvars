@@ -1,8 +1,10 @@
 
+
 terraform {
-  backend "git" {
-    git.repository = "https://srinivasmunugoti/terraform_python_githubactions"
-    git.ref= "main"
-    git.state = "terraform/state.json
+  backend "s3" {
+    bucket = "mybucket"
+    key    = "path/to/my/key"
+    region = "us-east-1"
   }
 }
+
