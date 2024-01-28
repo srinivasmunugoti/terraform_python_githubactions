@@ -1,7 +1,8 @@
 
 terraform {
   backend "git" {
-    repository = "https://github.com/srinivasmunugoti/terraform_python_githubactions.git"
+    repository = "https://srinivasmunugoti/terraform_python_githubactions"
+    ref: main
     file = "terraform/backend/tfstate.json
   }
 }
