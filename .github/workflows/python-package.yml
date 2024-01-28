@@ -29,8 +29,8 @@ jobs:
     - run: pip install -r requirements.txt
     - name: checking all versions
       run: |
-         aws help
-         terraform 
-         git 
+         aws configure list
+         terraform --version
+         git --version
 
     
