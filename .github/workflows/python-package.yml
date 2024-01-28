@@ -42,13 +42,14 @@ jobs:
         
     - name: aws configure list updated
       run: aws configure list
-
-    - name: terraform initialization
-      run: terraform init
+#
+#    - name: terraform initialization
+#      run: terraform init
       
-    - name: terraform planning
-      run: terraform plan
+#    - name: terraform planning
+#      run: terraform plan
       
-    - name: terraform applying
-      run: terraform apply -auto-approve
-      
+#    - name: terraform applying
+#      run: terraform apply -auto-approve
+     - name: terraform destroy
+       run: terraform destroy -auto-approve
