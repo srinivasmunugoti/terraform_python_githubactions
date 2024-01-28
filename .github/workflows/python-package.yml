@@ -33,4 +33,12 @@ jobs:
          terraform --version
          git --version
 
-    
+    - name: "Configure AWS Credentials" 
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-region: us-east-1
+        aws-access-key-id: AKIA3TDJBUERPJANR5XW
+        aws-secret-access-key: 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
+        
+    - name: aws configure list updated
+      run: aws configure list
