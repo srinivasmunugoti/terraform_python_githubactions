@@ -22,6 +22,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.1.1
       with:
-        repository: srinivasmunugoti/terraform-repo
+        repository: srinivasmunugoti/terraform_python_githubactions
         ref: main
     #    token: # optional, default is ${{ github.token }}
