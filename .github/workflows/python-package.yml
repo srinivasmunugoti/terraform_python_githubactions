@@ -36,8 +36,8 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-region: us-east-1
-        aws-access-key-id: AKIA3TDJBUERPJANR5XW
-        aws-secret-access-key: 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
+        aws-access-key-id: AKIA3TDJBUERLDTND5HB
+        aws-secret-access-key: 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
         
     - name: aws configure list updated
       run: aws configure list
