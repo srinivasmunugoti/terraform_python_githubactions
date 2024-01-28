@@ -41,14 +41,17 @@ jobs:
         
     - name: aws configure list updated
       run: aws configure list
-#
-    - name: terraform initialization
-      run: terraform init
+      
+    - name: present location
+      run: pwd
+#    - name: terraform initialization
+ #     run: terraform init -backend-config=backend.tfvars
+
       
 #    - name: terraform planning
 #      run: terraform plan
       
 #    - name: terraform applying
 #      run: terraform apply -auto-approve
-     - name: terraform destroy
-       run: terraform destroy -auto-approve
+   #  - name: terraform destroy
+   #    run: terraform destroy -auto-approve
