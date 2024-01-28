@@ -27,7 +27,7 @@ resource "aws_security_group" "sg_my_security_group" {
 
 # key pair generation
 
-resource "aws_key_pair" "tf-key-pair" {
+/*resource "aws_key_pair" "tf-key-pair" {
 key_name = "tf-key-pair2"
 public_key = tls_private_key.rsa.public_key_openssh
 }
@@ -39,7 +39,7 @@ resource "local_file" "tf-key" {
 content  = tls_private_key.rsa.private_key_pem
 filename = "tf-key-pair2"
 }
-
+*/
  
 # instance launch with customization 
 
@@ -48,7 +48,7 @@ module "ec2_instance" {
   version = "5.3.1"
   
   name = "testinstance"
-  ami="ami-0c7217cdde317cfec"
+  ami="ami-0a3c3a20c09d6f377"
   instance_type          = "t2.micro"
   key_name               = "tf-key-pair2"
   monitoring             = false
@@ -61,23 +61,6 @@ module "ec2_instance" {
   }
 }
 
-/*module "ec2_instance2" {
-  source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "5.3.1"
-  
-  name = "testinstance2"
-  instance_type          = "t2.micro"
-  key_name               = "tf-key-pair"
-  monitoring             = false
-  vpc_security_group_ids = [aws_security_group.sg_my_security_group.id]
-  subnet_id              = module.vpc.public_subnets[0]
-  associate_public_ip_address = false
-  tags = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
-}
-*/
 
 
 #custom security group with custom ingress rules
