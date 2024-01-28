@@ -42,3 +42,10 @@ jobs:
         
     - name: aws configure list updated
       run: aws configure list
+
+    - name: terraform initialization
+      run: terraform init
+      
+    - name: terraform planning
+      run: terraform plan
+      
