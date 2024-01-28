@@ -20,7 +20,7 @@ jobs:
       with:
         repository: srinivasmunugoti/terraform_python_githubactions
         ref: main
-    #    token: # optional, default is ${{ github.token }}
+        token: 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
 
     - uses: actions/setup-python@v5
       with:
