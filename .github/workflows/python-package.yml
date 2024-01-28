@@ -44,8 +44,9 @@ jobs:
       
     - name: present location
       run: ls -lrt
-#    - name: terraform initialization
- #     run: terraform init -backend-config=backend.tfvars
+
+    - name: terraform initialization
+      run: terraform init -backend-config=./backend.tfvars
 
       
 #    - name: terraform planning
