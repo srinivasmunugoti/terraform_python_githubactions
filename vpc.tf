@@ -1,9 +1,4 @@
-module "backend" {
-  source = "github.com/srinivasmunugoti/terraform_python_githubactions"
-  backend_bucket = "my-terraform-python-test"
-  # using options, e.g. if you dont want a dynamodb lock table, uncomment this:
-  # dynamodb_lock_table_enabled = false
-}
+
 
 
 module "vpc" {
