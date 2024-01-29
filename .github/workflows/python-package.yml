@@ -36,8 +36,8 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-region: us-east-1
-     #   aws-access-key-id: AKIA3TDJBUERLDTND5HB
-     #   aws-secret-access-key: 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
+        aws-access-key-id: AKIA3TDJBUERLDTND5HB
+        aws-secret-access-key: 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
         
     - name: aws configure list updated
       run: aws configure list
@@ -52,8 +52,8 @@ jobs:
     - name: terraform planning
       run: terraform plan
       
-  #  - name: terraform applying
-  #    run: terraform apply -auto-approve
-    - name: terraform destroy
-      run: terraform destroy -auto-approve
+    - name: terraform applying
+      run: terraform apply -auto-approve
+  #  - name: terraform destroy
+  #    run: terraform destroy -auto-approve
       */
