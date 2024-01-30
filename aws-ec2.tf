@@ -42,7 +42,7 @@ filename = "tf-key-pair2"
 */
 
 resource "aws_key_pair" "deployer" {
-  key_name   = "newkey2"
+  key_name   = "newkey3"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJqEw7aSBH3fDOZrDZMxhZB7xWfcC7UIXAGrahvxL/R5I9/NHJ+FfKo+iVAVBHSLGziaS89xpHTqfsufpDQTtb8voNXTkx4ukLPPOyeIsQyy3iRfvwYcwMzfsyLvv9urZJ8T8vMIv8+M5cSavpLodXM9DvH6LOzpKdjXDUy7lM5Qoh4R1cDhZTHqVAJlX4hQ4AnDcOePrdQLHaYp2lZ8VpBuX4MR6ReuXjFfJ9YSsPBW90npAcfMhC1+T01vMM3dHktyMDH28x71tHjWon5B/8bSucNwUv01KwXmnJtTEImCekjYC+HwVgblHM/aqxmCdPWZDYbut/DaujT6SfGb5V"
 }
 
