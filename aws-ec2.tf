@@ -42,7 +42,12 @@ filename = "tf-key-pair2"
 */
  
 # instance launch with customization 
+module "key_pair" {
+  source = "terraform-aws-modules/key-pair/aws"
 
+  key_name   = "allinone"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCq2udH9OTMXtcVrtBwkiHm4GWKgpq4tFJw5rW1gY3ocvVQGMdry7ImlSZe/z3GZvcxuMCAg3OHffb95Lqkt069EznPFh3h5fub5iRlOA/2jKGd9xe0GIk1yCzbYj2iKJ8tnuXJE1Nr5VQSOvUEafMmAtknWNGdwatOyvC+KIkd/d+5hKY6huxDbVfpprInHUx2WVdOkaS5CKQ+JL73IFSPqs/K2UIJyKdIv25AmwmTI5gezERaOHCzYf9YsSFS6YO/O5s74Grn+nsCml5x1KSN0xAc3sOmQq1egoUuWrnW/yjlxt6Z6xe3zZb4hLO7GtjiigPJtYx8h5JivuDfMWan"
+}
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "5.3.1"
@@ -50,7 +55,7 @@ module "ec2_instance" {
   name = "jenkinsinstance"
   ami="ami-0a3c3a20c09d6f377"
   instance_type          = "t2.micro"
-  key_name               = "allinone.pem"
+  key_name               = "allinone"
   monitoring             = false
   vpc_security_group_ids = [aws_security_group.sg_my_security_group.id]
   subnet_id              = module.vpc.public_subnets[0]
